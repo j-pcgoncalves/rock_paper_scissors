@@ -1,8 +1,17 @@
 import 'dart:io';
 
 void main() {
-  print("Rock, paper or scissors? (r/p/s)");
+  while (true) {
+    stdout.write("Rock, paper or scissors? (r/p/s) ");
 
-  final input = stdin.readLineSync();
-  print(input);
+    final input = stdin.readLineSync();
+
+    if (input == "r" || input == "p" || input == "s") {
+      print("Selected: $input");
+    } else if (input == "q") {
+      break;
+    } else {
+      print("Invalid Input");
+    }
+  }
 }
